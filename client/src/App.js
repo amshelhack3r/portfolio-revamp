@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import '../node_modules/antd/dist/antd.min.css'
+import './scss/global.scss'
+import Header from './components/header';
+import Hero from './components/hero';
+import ThemeContext, { ThemeProvider } from './state/ThemeContext';
 
 function App() {
+  const { theme } = useContext(ThemeContext)
+  console.log(theme.app);
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Hello world</h1>
-      </header>
+    <div className="App" style={theme.app}>
+      <Header />
+      <Hero />
     </div>
   );
 }
