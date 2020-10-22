@@ -24,8 +24,8 @@ export const darkTheme = {
         border: `1px solid ${globals.outline_red}`
     },
     about: {
-        fontSize: '28px',
-        lineHeight: '44px',
+        fontSize: '20px',
+        lineHeight: '40px',
         textAlign: 'center'
     },
     smiley: globals.outline_red,
@@ -43,9 +43,37 @@ export const darkTheme = {
         backgroundColor: globals.primary
     },
     stack_span: {
-        border: `1px solid ${globals.outline_red}`
+        border: `2px solid ${globals.primary_accent}`
+    },
+    info_card: {
+        backgroundColor: globals.primary_accent
+    },
+    pill: {
+        border: `1px solid ${globals.outline_red}`,
+        color: globals.whitesmoke
 
-
+    },
+    content_btn: {
+        border: `3px solid ${globals.whitesmoke}`,
+        color: globals.outline_red
+    },
+    project_container: {
+        // boxShadow: `0 2px 8px 2px ${globals.primary}`
+    },
+    social: {
+        fontSize: "55px",
+        color: globals.whitesmoke
+    },
+    heading: {
+        textAlign: "center",
+        textDecoration: "underline",
+        textDecorationColor: globals.outline_red,
+        color: globals.whitesmoke
+    },
+    built: {
+        color: globals.outline_red,
+        textDecoration: "underline",
+        fontWeight: "600"
     }
 
 
@@ -67,8 +95,8 @@ export const lightTheme = {
         border: `1px solid ${globals.primary}`
     },
     about: {
-        fontSize: '28px',
-        lineHeight: '44px',
+        fontSize: '20px',
+        lineHeight: '40px',
         textAlign: 'center'
     },
     smiley: "#1890FF",
@@ -90,6 +118,36 @@ export const lightTheme = {
     },
     stack_span: {
         border: `1px solid ${globals.primary}`
+    },
+    info_card: {
+        backgroundColor: "white"
+    },
+    pill: {
+        border: `1px solid ${globals.secondary}`,
+        color: globals.secondary
+
+    },
+    content_btn: {
+        border: `3px solid ${globals.secondary}`,
+        color: globals.secondary
+    },
+    project_container: {
+        boxShadow: `0 2px 8px 2px ${globals.primary}`
+    },
+    social: {
+        fontSize: "55px",
+        color: globals.primary
+    },
+    heading: {
+        textAlign: "center",
+        textDecoration: "underline",
+        textDecorationColor: globals.primary,
+        color: globals.primary
+    },
+    built: {
+        color: globals.outline_red,
+        textDecoration: "underline",
+        fontWeight: "600"
     }
 
 }
