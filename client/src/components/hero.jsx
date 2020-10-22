@@ -1,10 +1,13 @@
 import React from 'react'
 import { Row, Col, Image } from 'antd'
-import { SmileTwoTone } from '@ant-design/icons';
+import { SmileTwoTone, DownOutlined } from '@ant-design/icons';
 import { useContext } from 'react';
 import ThemeContext from '../state/ThemeContext';
 
 export default function Hero() {
+    const style = {
+        width: "5%"
+    }
 
     const { theme } = useContext(ThemeContext)
     return <Row className="hero">
@@ -43,14 +46,22 @@ export default function Hero() {
         <Col span="2"></Col>
         <Col span="16">
             <p className="about" style={theme.about}>
-                Hello Friend<SmileTwoTone twoToneColor={theme.smiley} /> My name is Samuel Kanyi and most of
-                my friends call me Sam. I am a fullstack
-                developer and currently staying in
-                Kenya.
+                Hello Friend <SmileTwoTone twoToneColor={theme.smiley} /> My name is Samuel Kanyi.<br /> I am a fullstack
+                developer and currently staying in Kenya.<br />
                 I enjoy building mobile and web applications.
-                Check out Some of the projects i've worked on below.
-
                 </p>
+            <p style={theme.about}>I am a decent football player<img style={style} src="images/soccer-player.png" alt="soccer" /> and a  phenomenal pool<img style={style} src="images/ball-pool.png" alt="pool" /> player</p>
+
+            <p style={theme.about}>My interest at the moment is DevOps. More specific on Kubernates and Serverless architecture</p>
+
+            <Row>
+                <div class='cta'>
+                    <span class='pulse-button'>
+                        <DownOutlined style={{ fontSize: "40px" }} />
+                    </span>
+                </div>
+            </Row>
         </Col>
+
     </Row>
 }
