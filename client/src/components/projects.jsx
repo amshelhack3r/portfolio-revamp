@@ -1,48 +1,49 @@
 import React from 'react'
-import { Typography } from "antd"
-import { useState } from 'react';
-import { useEffect } from 'react';
-import Loader from './loader';
+import { Typography, Button } from "antd"
+import { GithubOutlined } from '@ant-design/icons';
+import { useContext } from 'react';
+import ThemeContext from '../state/ThemeContext';
 
 const { Title } = Typography;
 
 
-export default function Project() {
+export default function Project(props) {
+    const projects = props.projects;
+    const { theme } = useContext(ThemeContext)
+    console.log(projects);
+    return projects.length > 0 ? <>
+        <Title level={2} style={theme.heading}>PROJECTS</Title>
+        <ul >
+            {
 
-    const [loaded, setLoaded] = useState(false)
-    const [projects, setProjects] = useState([])
-
-    useEffect(() => {
-        fetch("http://localhost:3000/projects").then(response => response.json()).then(projects => {
-            setProjects(projects)
-            setLoaded(true)
-        })
-    }, [])
-    return <>
-        <Title level={2}>PROJECTS</Title>
-        {
-            loaded ?
-                <ul>
-                    <li className="booking-card" style={{ backgroundImage: "url(https://images.unsplash.com/photo-1578944032637-f09897c5233d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ)" }}>
+                projects.map(project => {
+                    return (<li className="booking-card" style={{ backgroundImage: `url(images/${project.image})`, ...theme.project_container }}>
                         <div className="book-container">
                             <div className="content">
-                                <button className="btn">VISIT</button>
+                                <a href={project.website} className="btn" target="_blank" rel="noopener noreferrer">VISIT</a>
                             </div>
                         </div>
-                        <div className="informations-container">
-                            <h2 className="title">MountainTop Website</h2>
-                            <p className="sub-title">Tours and Travel Website</p>
-                            <h4>BUILT USING</h4>
+                        <div className="informations-container" style={theme.info_card}>
+                            <Title level={2} style={theme.heroText}>{project.title.toUpperCase()}</Title>
+                            <p className="sub-title" style={theme.heroText}>{project.description}</p>
+                            <h4 style={theme.heroText}>BUILT USING</h4>
                             <div className="pills">
-                                <span>React</span>
-                                <span>Javascript</span>
-                                <span>Laravel</span>
+                                {
+                                    project.languages.map(language => <span style={theme.pill}>{language}</span>)
+                                }
                             </div>
+                            {
+                                project.repo ? <Button
+                                    type="primary"
+                                    href={project.repo}
+                                    icon={<GithubOutlined />}
+                                >GITHUB</Button> : <Button type="primary" icon={<GithubOutlined />} disabled>GITHUB(private)</Button>
+                            }
                         </div>
-
-                    </li>
-                </ul> : <Loader />
-        }
-    </>
+                    </li>)
+                })
+            }
+        </ul>
+    </> : <h1>No data</h1>
 
 }
