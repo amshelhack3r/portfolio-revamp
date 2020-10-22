@@ -1,5 +1,5 @@
 import React from 'react'
-import { TwitterCircleFilled, TwitterOutlined, GithubFilled, GithubOutlined, LinkedinFilled, LinkedinOutlined, MailOutlined, PhoneOutlined } from '@ant-design/icons'
+import { TwitterCircleFilled, TwitterOutlined, GithubFilled, GithubOutlined, LinkedinFilled, LinkedinOutlined, MailOutlined, PhoneOutlined, RedditCircleFilled, RedditOutlined } from '@ant-design/icons'
 import { useContext } from 'react';
 import ThemeContext from '../state/ThemeContext';
 import { Typography, Popover } from 'antd'
@@ -17,15 +17,17 @@ export default function Contact() {
             {
                 isDark ?
                     <>
-                        <Popover title="TWITTER"><TwitterCircleFilled style={theme.social} /></Popover>
-                        <Popover title="GITHUB"><GithubFilled style={theme.social} /></Popover>
-                        <Popover title="LINKEDIN"><LinkedinFilled style={theme.social} /></Popover>
+                        <Popover title="TWITTER"><a href="https://twitter.com/amshelkanyi" rel="noopener noreferrer" target="_blank" ><TwitterCircleFilled style={theme.social} /></a></Popover>
+                        <Popover title="GITHUB"><a href="https://github.com/amshelhack3r" rel="noopener noreferrer" target="_blank" ><GithubFilled style={theme.social} /></a></Popover>
+                        <Popover title="LINKEDIN"><a href="https://www.linkedin.com/in/samuel-kanyi-341827a3/" rel="noopener noreferrer" target="_blank" ><LinkedinFilled style={theme.social} /></a></Popover>
+                        <Popover title="REDDIT"><a href="https://www.reddit.com/user/amshel20" rel="noopener noreferrer" target="_blank" ><RedditCircleFilled style={theme.social} /></a></Popover>
                     </>
                     :
                     <>
-                        <Popover title="TWITTER"><TwitterOutlined style={theme.social} /></Popover>
-                        <Popover title="GITHUB"><GithubOutlined style={theme.social} /></Popover>
-                        <Popover title="LINKEDIN"><LinkedinOutlined style={theme.social} /></Popover>
+                        <Popover title="TWITTER"><a href="https://twitter.com/amshelkanyi" rel="noopener noreferrer" target="_blank" ><TwitterOutlined style={theme.social} /></a></Popover>
+                        <Popover title="GITHUB"><a href="https://github.com/amshelhack3r" rel="noopener noreferrer" target="_blank" ><GithubOutlined style={theme.social} /></a></Popover>
+                        <Popover title="LINKEDIN"><a href="https://www.linkedin.com/in/samuel-kanyi-341827a3/" rel="noopener noreferrer" target="_blank" ><LinkedinOutlined style={theme.social} /></a></Popover>
+                        <Popover title="REDDIT"><a href="https://www.reddit.com/user/amshel20" rel="noopener noreferrer" target="_blank" ><RedditOutlined style={theme.social} /></a></Popover>
                     </>
             }
         </div>
