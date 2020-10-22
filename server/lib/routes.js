@@ -51,7 +51,7 @@ router.put('/project', (req, res) => {
 })
 
 router.delete('/project', (req, res) => {
-  projectModel.findOneAndDelete({ 'title': req.body.title }, (err, doc) => {
+  projectModel.findOneAndDelete({ title: req.body.title }, (err, doc) => {
     if (err) throw err;
     res.status(301).json(doc)
   })
