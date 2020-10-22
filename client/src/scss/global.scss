@@ -155,11 +155,11 @@ hr.cool:after {
         justify-content: center;
         margin: 0 auto;
 
-        &>span {
+        &>a {
             margin-right: 20px;
         }
 
-        &>span:hover {
+        &>a:hover {
             cursor: pointer;
             animation: shake 375ms infinite;
             animation-timing-function: linear;
