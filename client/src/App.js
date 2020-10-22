@@ -18,7 +18,7 @@ function App() {
   const [projects, setProjects] = useState([])
 
   useEffect(() => {
-    fetch("http://localhost:8080/project").then(response => response.json()).then(projects => {
+    fetch("https://blooming-dawn-96645.herokuapp.com/project").then(response => response.json()).then(projects => {
       setProjects(projects)
       setLoaded(true)
     })
