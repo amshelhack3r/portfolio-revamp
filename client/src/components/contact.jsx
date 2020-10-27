@@ -3,7 +3,6 @@ import { TwitterCircleFilled, TwitterOutlined, GithubFilled, GithubOutlined, Lin
 import { useContext } from 'react';
 import ThemeContext from '../state/ThemeContext';
 import { Typography, Popover } from 'antd'
-import Download from '@axetroy/react-download';
 
 const { Title } = Typography
 export default function Contact() {
