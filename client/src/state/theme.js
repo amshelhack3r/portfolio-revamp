@@ -74,7 +74,8 @@ export const darkTheme = {
     download: {
         border: `3px solid whitesmoke`,
         color: globals.whitesmoke,
-        boxShadow: `0 2px 8px 2px ${globals.secondary}`
+        boxShadow: `0 2px 8px 2px ${globals.secondary}`,
+        fontWeight: "800"
 
     }
 
@@ -149,7 +150,9 @@ export const lightTheme = {
     },
     download: {
         border: `3px solid ${globals.primary}`,
-        boxShadow: `0 2px 8px 2px ${globals.secondary}`
+        boxShadow: `0 2px 8px 2px ${globals.secondary}`,
+        color: globals.primary,
+        fontWeight: "800"
 
     }
 

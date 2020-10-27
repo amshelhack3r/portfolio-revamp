@@ -34,9 +34,9 @@ export default function Contact() {
         </div>
         <a href="resume_kanyi.pdf" target="_blank">
             <div style={theme.download} className="download">{
-                isDark ? <box-icon name='download' size="lg" color="white"></box-icon>
-                    : <box-icon name='download' type='solid' size="lg" color="#081229"></box-icon>}
-            DOWNLOAD RESUME</div>
+                isDark ? <box-icon name='link-external' size="lg" color="white"></box-icon>
+                    : <box-icon name='link-external' type='solid' size="lg" color="#081229"></box-icon>}
+            VIEW RESUME</div>
         </a>
 
     </div>
