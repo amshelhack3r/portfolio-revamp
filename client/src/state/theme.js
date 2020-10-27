@@ -23,11 +23,7 @@ export const darkTheme = {
     avatarOutline: {
         border: `1px solid ${globals.outline_red}`
     },
-    about: {
-        fontSize: '20px',
-        lineHeight: '40px',
-        textAlign: 'center'
-    },
+
     smiley: globals.outline_red,
     hr: {
         borderTop: `medium double ${globals.whitesmoke}`,
@@ -94,11 +90,7 @@ export const lightTheme = {
     avatarOutline: {
         border: `1px solid ${globals.primary}`
     },
-    about: {
-        fontSize: '20px',
-        lineHeight: '40px',
-        textAlign: 'center'
-    },
+
     smiley: "#1890FF",
     hr: {
         borderTop: `medium double ${globals.outline_red}`,

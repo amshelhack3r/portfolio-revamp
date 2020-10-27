@@ -24,7 +24,7 @@ function App() {
     })
   }, [])
   const { theme } = useContext(ThemeContext)
-  console.log(theme.app);
+  // console.log(theme.app);
   return (
     <div className="App" style={theme.app}>
       {

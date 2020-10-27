@@ -8,16 +8,19 @@ const { Title } = Typography;
 
 
 export default function Project(props) {
+
+    const randomNum = () => Math.floor(Math.random * 100)
+
     const projects = props.projects;
     const { theme } = useContext(ThemeContext)
-    console.log(projects);
+    // console.log(projects);
     return projects.length > 0 ? <>
         <Title level={2} style={theme.heading}>PROJECTS</Title>
         <ul >
             {
 
-                projects.map(project => {
-                    return (<li className="booking-card" style={{ backgroundImage: `url(images/${project.image})`, ...theme.project_container }}>
+                projects.map((project, index) => {
+                    return (<li key={index} className="booking-card" style={{ backgroundImage: `url(images/${project.image})`, ...theme.project_container }}>
                         <div className="book-container">
                             <div className="content">
                                 <a href={project.website} className="btn" target="_blank" rel="noopener noreferrer">VISIT</a>
@@ -29,7 +32,7 @@ export default function Project(props) {
                             <h4 style={theme.heroText}>BUILT USING</h4>
                             <div className="pills">
                                 {
-                                    project.languages.map(language => <span style={theme.pill}>{language}</span>)
+                                    project.languages.map((language, index) => <span key={index} style={theme.pill}>{language}</span>)
                                 }
                             </div>
                             {

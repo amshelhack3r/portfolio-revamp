@@ -13,7 +13,7 @@ const ThemeContext = React.createContext(initialState)
 const reducer = (state, action) => {
     switch (action.type) {
         case "CHANGE_THEME":
-            console.log(state);
+            // console.log(state);
             return state.isDark ? {
                 isDark: false,
                 theme: lightTheme
