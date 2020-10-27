@@ -9,8 +9,6 @@ const { Title } = Typography;
 
 export default function Project(props) {
 
-    const randomNum = () => Math.floor(Math.random * 100)
-
     const projects = props.projects;
     const { theme } = useContext(ThemeContext)
     // console.log(projects);

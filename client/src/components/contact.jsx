@@ -2,7 +2,8 @@ import React from 'react'
 import { TwitterCircleFilled, TwitterOutlined, GithubFilled, GithubOutlined, LinkedinFilled, LinkedinOutlined, MailOutlined, PhoneOutlined, RedditCircleFilled, RedditOutlined } from '@ant-design/icons'
 import { useContext } from 'react';
 import ThemeContext from '../state/ThemeContext';
-import { Typography, Popover, Button } from 'antd'
+import { Typography, Popover } from 'antd'
+import Download from '@axetroy/react-download';
 
 const { Title } = Typography
 export default function Contact() {
@@ -31,8 +32,12 @@ export default function Contact() {
                     </>
             }
         </div>
-
-        <Button ></Button>
+        <a href="resume_kanyi.pdf" target="_blank">
+            <div style={theme.download} className="download">{
+                isDark ? <box-icon name='download' size="lg" color="white"></box-icon>
+                    : <box-icon name='download' type='solid' size="lg" color="#081229"></box-icon>}
+            DOWNLOAD RESUME</div>
+        </a>
 
     </div>
 }

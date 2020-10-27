@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Switch, Row, Col, Alert } from 'antd';
+import { Switch, Alert } from 'antd';
 import ThemeContext from '../state/ThemeContext';
 
 

@@ -23,6 +23,8 @@ body {
     @media (max-width: 767px) {
         flex-direction: column;
         align-items: center;
+        justify-content: space-around;
+        height: 200px;
 
     }
 }
@@ -186,7 +188,7 @@ hr.cool:after {
         width: 100%;
         display: inline-flex;
         justify-content: center;
-        margin: 0 auto;
+        margin: 0 auto 20px auto;
 
         &>a {
             margin-right: 20px;
@@ -199,6 +201,31 @@ hr.cool:after {
         }
 
 
+    }
+
+    .download {
+        display: flex;
+        margin: 0 auto;
+        width: 20%;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 20px;
+
+        transition: transform 1s ease-in-out;
+
+        &:hover {
+            transform: scale(1.2);
+            cursor: pointer;
+
+        }
+
+        box-icon {
+            margin-right: 5px;
+        }
+
+        @media (max-width: 767px) {
+            width: 80%;
+        }
     }
 }
 

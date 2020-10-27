@@ -1,5 +1,5 @@
 import React from 'react'
-import { Row, Col, Image } from 'antd'
+import { Row, Image } from 'antd'
 import { SmileTwoTone, DownOutlined } from '@ant-design/icons';
 import { useContext } from 'react';
 import ThemeContext from '../state/ThemeContext';

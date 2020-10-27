@@ -70,6 +70,12 @@ export const darkTheme = {
         color: globals.outline_red,
         textDecoration: "underline",
         fontWeight: "600"
+    },
+    download: {
+        border: `3px solid whitesmoke`,
+        color: globals.whitesmoke,
+        boxShadow: `0 2px 8px 2px ${globals.secondary}`
+
     }
 
 
@@ -88,12 +94,12 @@ export const lightTheme = {
         boxShadow: `0 2px 8px 2px ${globals.primary}`
     },
     avatarOutline: {
-        border: `1px solid ${globals.primary}`
+        border: `1px solid ${globals.primary} `
     },
 
     smiley: "#1890FF",
     hr: {
-        borderTop: `medium double ${globals.outline_red}`,
+        borderTop: `medium double ${globals.outline_red} `,
         color: globals.outline_red
 
     },
@@ -109,22 +115,22 @@ export const lightTheme = {
 
     },
     stack_span: {
-        border: `1px solid ${globals.primary}`
+        border: `1px solid ${globals.primary} `
     },
     info_card: {
         backgroundColor: "white"
     },
     pill: {
-        border: `1px solid ${globals.secondary}`,
+        border: `1px solid ${globals.secondary} `,
         color: globals.secondary
 
     },
     content_btn: {
-        border: `3px solid ${globals.secondary}`,
+        border: `3px solid ${globals.secondary} `,
         color: globals.secondary
     },
     project_container: {
-        boxShadow: `0 2px 8px 2px ${globals.primary}`
+        boxShadow: `0 2px 8px 2px ${globals.primary} `
     },
     social: {
         fontSize: "55px",
@@ -140,6 +146,11 @@ export const lightTheme = {
         color: globals.outline_red,
         textDecoration: "underline",
         fontWeight: "600"
+    },
+    download: {
+        border: `3px solid ${globals.primary}`,
+        boxShadow: `0 2px 8px 2px ${globals.secondary}`
+
     }
 
 }
